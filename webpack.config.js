@@ -98,15 +98,21 @@ const plugins = () => {
         collapseWhitespace: !isDev
       }
     }),
+
     new CleanWebpackPlugin(),
+
+    /*
     new CopyWebpackPlugin([{
       from: path.resolve(__dirname, 'src/assets/img/favicon.ico'),
       to: path.resolve(__dirname, 'dist'),
     }]),
+     */
+    
     new MiniCssExtractPlugin({
       filename: filename('css'),
       chunkFilename: chunkFilename('css'),
     }),
+
     new Dotenv()
   ]
 
@@ -124,7 +130,8 @@ module.exports = {
   mode: 'development',
   entry: {
     main: ['@babel/polyfill', './index.jsx'],
-    analytics: './analytics.ts'
+    //main: ['@babel/polyfill', './index.jsx'],
+    //analytics: './analytics.ts'
   },
   
   node: {
