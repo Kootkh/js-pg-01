@@ -1,23 +1,29 @@
 {
-  "name": "js-pg-01",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "node ."
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Kootkh/js-pg-01.git"
-  },
-  "author": "Veprikov S. <veprikov.s@gmail.com>",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Kootkh/js-pg-01/issues"
-  },
-  "homepage": "https://github.com/Kootkh/js-pg-01#readme",
-  "dependencies": {
-    "dotenv": "^8.2.0",
-    "pg": "^7.18.1"
-  }
+    "name": "js-pg-01",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "node .",
+        "fulltable": "node fullTable.js",
+        "asyncfulltable": "node asyncFullTable.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Kootkh/js-pg-01.git"
+    },
+    "author": "Veprikov S. <veprikov.s@gmail.com>",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/Kootkh/js-pg-01/issues"
+    },
+    "homepage": "https://github.com/Kootkh/js-pg-01#readme",
+    "dependencies": {
+        "dotenv": "^8.2.0",
+        "pg": "^7.18.1",
+        "pg-cursor": "^2.1.5"
+    },
+    "devDependencies": {
+        "eslint": "^6.8.0"
+    }
 }
