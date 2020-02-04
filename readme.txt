@@ -56,3 +56,5 @@ implementing ESLINT webpack support:
   npm i lodash
 
   npm i -D webpack-bundle-analyzer
+
+  npm -i pg

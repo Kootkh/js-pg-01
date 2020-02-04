@@ -10,7 +10,7 @@
 //import '@styles/styles.css'
 //import '@styles/styles.less'
 //import '@styles/styles.scss'
-//require('dotenv').config();
+require('dotenv').config();
 
 //const post = new Post('Webpack post Title', WebpackLogo)
 
@@ -41,3 +41,20 @@
 //console.log('JSON:',json)
 //console.log('XML:',xml)
 //console.log('CSV:',csv)
+// #######################################################################################################
+
+const { Client } = require('pg');
+// import { Client } from 'pg';
+
+const client = new Client({
+  user: process.env.PG_DB_USER,
+  password: process.env.PG_DB_PASS,
+  host: process.env.PG_DB_HOST,
+  port: process.env.PG_DB_PORT,
+  database: "test_db",
+})
+
+client.connect()
+.then( () => console.log("Connected succefuly") )
+.catch( e => console.log)
+.finally( () => client.end() )
