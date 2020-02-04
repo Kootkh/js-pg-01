@@ -1,0 +1,25 @@
+{
+  "name": "js-pg-01",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kootkh/js-pg-01.git"
+  },
+  "author": "Veprikov <veprikov.s@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kootkh/js-pg-01/issues"
+  },
+  "homepage": "https://github.com/Kootkh/js-pg-01#readme",
+  "dependencies": {
+    "pg": "^7.18.1"
+  },
+  "devDependencies": {
+    "dotenv": "^8.2.0"
+  }
+}
