@@ -11,8 +11,8 @@ const client = new Client({
 })
 
 client.connect()
-.then( () => console.log("Connected succefuly") )
+.then( () => console.log("Connected successfuly") )
 .then( () => client.query("select * from \"hardware\" where \"vendor_name\" = $1", ["yealink"]) )
-.then(results => console.table(results.rows))
+.then( results => console.table(results.rows) )
 .catch( e => console.log("Error", e) )
 .finally( () => client.end() )

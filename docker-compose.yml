@@ -2,20 +2,26 @@ version: '3.5'
 
 services:
   postgres:
+    build:
+      context: .
+      dockerfile: Dockerfile-postgres
     container_name: postgres_container
-    image: postgres
+    image: postgres:11
     environment:
       POSTGRES_USER: ${POSTGRES_USER:-postgres}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-postgres}
-      PGDATA: /data/postgres
-    volumes:
-       - postgres:/data/postgres
+      #PGDATA: /data/postgres
+      POSTGRES_INITDB_ARGS: "-E UTF8 -T template0 --lc-collate=ru_RU.UTF-8 --lc-ctype=ru_RU.UTF-8"
     ports:
       - "5432:5432"
     networks:
       - postgres
     restart: unless-stopped
-  
+    volumes:
+      #- pg-data:/data/postgres
+      #- pg-data:/var/lib/postgresql/data
+      - ./pg-data:/var/lib/postgresql/data
+
   pgadmin:
     container_name: pgadmin_container
     image: dpage/pgadmin4
@@ -36,4 +42,5 @@ networks:
 
 volumes:
     postgres:
+    #pg-data:
     pgadmin:
