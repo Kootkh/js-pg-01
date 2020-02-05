@@ -1,1 +1,1 @@
-# webpack_example
+# JS-PG
