@@ -1,34 +1,45 @@
 {
-  "name": "js-pg-01",
-  "version": "1.0.0",
-  "description": "HW prov",
-  "main": "index.js",
-  "scripts": {
-    "test": "node .",
-    "fulltable": "node fullTable.js",
-    "asyncfulltable": "node asyncFullTable.js",
-    "devStart": "nodemon server.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Kootkh/js-pg-01.git"
-  },
-  "author": "Veprikov S. <veprikov.s@gmail.com>",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Kootkh/js-pg-01/issues"
-  },
-  "homepage": "https://github.com/Kootkh/js-pg-01#readme",
-  "dependencies": {
-    "bcrypt": "^3.0.7",
-    "dotenv": "^8.2.0",
-    "ejs": "^3.0.1",
-    "express": "^4.17.1",
-    "pg": "^7.18.1",
-    "pg-cursor": "^2.1.5"
-  },
-  "devDependencies": {
-    "eslint": "^6.8.0",
-    "nodemon": "^2.0.2"
-  }
+    "name": "js-pg-01",
+    "version": "1.0.0",
+    "description": "HW prov",
+    "main": "index.js",
+    "scripts": {
+        "start": "cross-env NODE_ENV=production node server.js",
+        "devStart": "cross-env NODE_ENV=development nodemon server.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Kootkh/js-pg-01.git"
+    },
+    "author": "Veprikov S. <veprikov.s@gmail.com>",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/Kootkh/js-pg-01/issues"
+    },
+    "homepage": "https://github.com/Kootkh/js-pg-01#readme",
+    "dependencies": {
+        "bcrypt": "^3.0.7",
+        "body-parser": "^1.19.0",
+        "connect-flash": "^0.1.1",
+        "cookie-parser": "^1.4.4",
+        "ejs": "^3.0.1",
+        "express": "^4.17.1",
+        "express-ejs-layouts": "^2.5.0",
+        "express-flash": "0.0.2",
+        "express-session": "^1.17.0",
+        "jquery": "^3.4.1",
+        "method-override": "^3.0.0",
+        "passport": "^0.4.1",
+        "passport-local": "^1.0.0",
+        "pg": "^7.18.1",
+        "pg-cursor": "^2.1.5",
+        "request": "^2.88.0",
+        "uuid": "^3.4.0"
+    },
+    "devDependencies": {
+        "cross-env": "^7.0.0",
+        "dotenv": "^8.2.0",
+        "eslint": "^6.8.0",
+        "nodemon": "^2.0.2"
+    }
 }

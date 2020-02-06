@@ -1,6 +1,8 @@
 require('dotenv').config();
 
-const { Client } = require('pg')
+const {
+    Client
+} = require('pg')
 const client = new Client({
     user: process.env.PG_DB_USER,
     password: process.env.PG_DB_PASS,
@@ -16,9 +18,11 @@ async function execute() {
 
         await client.connect()
         console.log("Connected successfully.")
-        //await client.query("insert into employees values (1, 'John')")
+            //await client.query("insert into employees values (1, 'John')")
 
-        const { rows } = await client.query("select * from \"employees\"")
+        const {
+            rows
+        } = await client.query("select * from \"employees\"")
         console.table(rows)
 
     } catch (ex) {

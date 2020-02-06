@@ -1,0 +1,19 @@
+<%- include("partials/header.ejs") %>
+
+
+    <container>
+        <div>.col-md-6.offset-md-3
+            <h3> text-center Home</h3>
+        </div>
+        <br>
+        <h1>Hi
+            <%#  < % = name %>
+        </h1>
+        <form action="/logout?_method=DELETE" method="POST">
+            <button type="submit">Log Out</button>
+        </form>
+    </container>
+    <br>
+
+
+    <%- include("partials/footer.ejs") %>

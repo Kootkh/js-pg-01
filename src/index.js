@@ -1,6 +1,7 @@
 require('dotenv').config();
 
 const { Client } = require('pg')
+
 const client = new Client({
     user: process.env.PG_DB_USER,
     password: process.env.PG_DB_PASS,
@@ -11,8 +12,7 @@ const client = new Client({
 
 client.connect()
     .then(() => console.log("Connected successfuly"))
-    .then(() => client.query("insert into \"employees\" values ($1, $2, $3)", [100, 'Nina', 'Dzuban']))
-    .then(() => client.query("select * from \"employees\""))
+    .then(() => client.query("select * from \"hardware\" where \"vendor_name\" = $1", ["yealink"]))
     .then(results => console.table(results.rows))
-    .catch(e => console.log(e))
+    .catch(e => console.log("Error", e))
     .finally(() => client.end())

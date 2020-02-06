@@ -10,6 +10,7 @@ dist/
 
 # Зависимости проекта
 node_modules/
+.vscode/
 
 # Атрибуты папки OSX
 .DS_Store
