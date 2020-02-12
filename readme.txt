@@ -34,6 +34,7 @@ create in root dir "webpack.config.js"
   npm i -D mini-css-extract-plugin
   npm i -D terser-webpack-plugin
   npm i -D optimize-css-assets-webpack-plugin
+  npm i -D nodemon-webpack-plugin
 
 implementing babel webpack support:
   npm i -D babel-loader @babel/core
@@ -56,5 +57,16 @@ implementing ESLINT webpack support:
   npm i lodash
 
   npm i -D webpack-bundle-analyzer
+  npm i -D nodemon-webpack-plugin
 
   npm -i pg
+
+
+
+  create .env in root dir
+
+  sudo npm i -g webpack webpack-cli
+
+  npm i -S dotenv-webpack normalize.css jquery @babel/polyfill react react-dom lodash
+  
+  npm i -D webpack webpack-cli html-webpack-plugin clean-webpack-plugin style-loader css-loader less less-loader node-sass sass-loader file-loader xml-loader csv-loader papaparse webpack-dev-server copy-webpack-plugin mini-css-extract-plugin terser-webpack-plugin optimize-css-assets-webpack-plugin nodemon-webpack-plugin babel-loader @babel/core @babel/preset-env @babel/preset-typescript @babel/preset-react @babel/plugin-proposal-class-properties eslint eslint-loader babel-eslint eslint-plugin-react webpack-bundle-analyzer nodemon-webpack-plugin
